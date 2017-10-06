@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
 
 # Define your item pipelines here
 #
@@ -25,7 +25,7 @@ class ScrapymercadoPipeline(object):
 		file = open('%s_items.csv' % spider.name, 'w+b')
 		self.files[spider] = file
  		self.exporter = CsvItemExporter(file)
-		self.exporter.fields_to_export = ['titulo', 'precio', 'ubicacion', 'ano', 'kilometros']
+		self.exporter.fields_to_export = ['titulo', 'ano', 'kilometros', 'precio' , 'ubicacion' , 'tipo' ]
 		self.exporter.start_exporting()
 
 	def spider_closed(self, spider):

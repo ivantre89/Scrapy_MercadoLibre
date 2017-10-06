@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
 
 # Define here the models for your scraped items
 #
@@ -11,4 +11,10 @@ import scrapy
 class ScrapymercadoItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    
+    titulo = scrapy.Field()
+    ano = scrapy.Field()
+    kilometros = scrapy.Field()
+    precio = scrapy.Field()
+    ubicacion = scrapy.Field()
+    tipo = scrapy.Field()
